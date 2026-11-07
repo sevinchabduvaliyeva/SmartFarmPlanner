@@ -3007,3 +3007,16 @@
     font-size: 11px;
   }
 }
+/* DARK MODE — ASOSIY DASHBOARD FONI */
+
+.farm-dark-theme .farm-main {
+  background: #111827;
+  color: #e5e7eb;
+}
+
+/* LIGHT MODE — ASOSIY DASHBOARD FONI */
+
+.farm-app:not(.farm-dark-theme) .farm-main {
+  background: #F7F4DF;
+  color: #263d30;
+}
