@@ -2353,7 +2353,9 @@ const t = (key) => translations[appLanguage]?.[key] || translations.uz[key] || k
 
       <aside className={`farm-sidebar ${mobileMenu ? 'farm-sidebar-open' : ''}`}>
         <div className="farm-brand">
-          <span className="farm-brand-icon"><Sprout size={25} /></span>
+          <span className="farm-brand-icon">
+  <Leaf size={29} strokeWidth={1.7} />
+</span>
           <span>SmartFarm <small>PLANNER</small></span>
           <button className="farm-close-menu" onClick={() => setMobileMenu(false)} aria-label="Yopish">
             <X size={20} />

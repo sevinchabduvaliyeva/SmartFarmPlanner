@@ -2,7 +2,6 @@
 import { useState } from 'react'
 import { supabase } from '../supabase'
 import {
-  Sprout,
   Mail,
   LockKeyhole,
   UserRound,
@@ -12,6 +11,21 @@ import {
   ArrowLeft
 } from 'lucide-react'
 import '../styles/AuthPage.css'
+
+function LogoMark() {
+  return (
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true">
+      <path d="M12 1.5c1.7 1.8 1.7 4.6 0 6.4c-1.7-1.8-1.7-4.6 0-6.4z" />
+      <path d="M12 10.5c-3 0-4.9-1.6-5.1-4.3c3 0 4.9 1.6 5.1 4.3z" />
+      <path d="M12 10.5c3 0 4.9-1.6 5.1-4.3c-3 0-4.9 1.6-5.1 4.3z" />
+      <path d="M12 15c-3 0-4.9-1.6-5.1-4.3c3 0 4.9 1.6 5.1 4.3z" />
+      <path d="M12 15c3 0 4.9-1.6 5.1-4.3c-3 0-4.9 1.6-5.1 4.3z" />
+      <path d="M12 19.5c-3 0-4.9-1.6-5.1-4.3c3 0 4.9 1.6 5.1 4.3z" />
+      <path d="M12 19.5c3 0 4.9-1.6 5.1-4.3c-3 0-4.9 1.6-5.1 4.3z" />
+      <rect x="11.2" y="8" width="1.6" height="15" rx=".8" />
+    </svg>
+  )
+}
 
 export default function AuthPage({ onLogin }) {
   const [mode, setMode] = useState('login')
@@ -101,7 +115,7 @@ export default function AuthPage({ onLogin }) {
     <main className="auth-page">
       <section className="auth-visual">
         <div className="auth-brand">
-          <span className="auth-brand-icon"><Sprout size={25} /></span>
+          <span className="auth-brand-icon"><LogoMark /></span>
           <span>SmartFarm<span className="brand-accent"> Planner</span></span>
         </div>
 
@@ -116,7 +130,7 @@ export default function AuthPage({ onLogin }) {
           <div className="auth-benefits">
             <div><span>✓</span> Ekin va maydonlarni boshqarish</div>
             <div><span>✓</span> Sug‘orish va o‘g‘itlash rejalari</div>
-            <div><span>✓</span> Ob-havo va AI tavsiyalari</div>
+            <div><span>✓</span> Ob-havo va ekin tavsiyalari</div>
           </div>
         </div>
 
@@ -128,7 +142,7 @@ export default function AuthPage({ onLogin }) {
       <section className="auth-form-side">
         <div className="auth-form-wrap">
           <div className="auth-mobile-brand">
-            <Sprout size={25} />
+            <LogoMark />
             <strong>SmartFarm Planner</strong>
           </div>
 

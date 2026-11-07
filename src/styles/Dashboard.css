@@ -29,7 +29,16 @@
 }
 
 .farm-brand { display: flex; align-items: center; gap: 11px; padding: 0 7px 28px; font-size: 17px; font-weight: 800; letter-spacing: -.5px; }
-.farm-brand-icon { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 13px; background: #eaf4e8; color: var(--farm-green); }
+.farm-brand-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  color: #347A45;
+  background: transparent;
+  border-radius: 0;
+  flex-shrink: 0;
+}
 .farm-brand small { display: block; margin-top: 3px; color: #89968b; font-size: 9px; letter-spacing: 2px; }
 .farm-close-menu { display: none; margin-left: auto; border: 0; background: transparent; color: #66756a; }
 
@@ -2606,4 +2615,118 @@
 
 .farm-stat-card p {
   font-size: 13px;
+}
+.farm-dark-theme .farm-panel:hover { border-color: #4b6752; }
+
+.farm-dark-theme .farm-table th {
+  background: #26362b;
+  color: #b8c8bc;
+  border-bottom-color: #3b5040;
+}
+
+.farm-dark-theme .farm-table td {
+  background: transparent;
+  color: #c6d2c9;
+  border-bottom-color: #34473a;
+}
+
+.farm-dark-theme .farm-table tbody tr:hover td { background: #26372b; }
+
+.farm-dark-theme .farm-crop-form,
+.farm-dark-theme .farm-ai-main,
+.farm-dark-theme .farm-profile-info p,
+.farm-dark-theme .farm-empty-panel,
+.farm-dark-theme .farm-empty-state,
+.farm-dark-theme .farm-weather-main {
+  background: #26362b;
+  border-color: #3b5040;
+  color: #e6eee8;
+}
+
+.farm-dark-theme .farm-crop-form label,
+.farm-dark-theme .farm-crop-form-field,
+.farm-dark-theme .farm-task-title,
+.farm-dark-theme .farm-profile-info p {
+  color: #d4e0d6;
+}
+
+.farm-dark-theme .farm-crop-form input,
+.farm-dark-theme .farm-crop-form select,
+.farm-dark-theme .farm-profile-form input,
+.farm-dark-theme .farm-password-form input,
+.farm-dark-theme .farm-language-settings select,
+.farm-dark-theme .farm-search {
+  background: #19251d;
+  border-color: #435847;
+  color: #edf4ee;
+}
+
+.farm-dark-theme .farm-outline-button {
+  background: #26372b;
+  border-color: #49634d;
+  color: #c0dfc2;
+}
+
+.farm-dark-theme .farm-outline-button:hover { background: #304835; }
+
+.farm-dark-theme .farm-notification-item.is-unread {
+  background: #263a2c;
+  border-color: #4a694f;
+}
+
+.farm-dark-theme .farm-notification-icon,
+.farm-dark-theme .farm-stat-icon.green,
+.farm-dark-theme .farm-empty-icon {
+  background: #304a35;
+  color: #a5d2a6;
+}
+
+.farm-dark-theme .farm-calendar-day.selected,
+.farm-dark-theme .farm-calendar-day.today {
+  background: #2b4832;
+  border-color: #79a77c;
+}
+
+.farm-dark-theme .farm-calendar-navigation button {
+  background: #26362b;
+  border-color: #435847;
+  color: #e6eee8;
+}
+
+.farm-dark-theme .farm-calendar-weekday,
+.farm-dark-theme .farm-calendar-event span,
+.farm-dark-theme .farm-weather-details span,
+.farm-dark-theme .farm-forecast-item span,
+.farm-dark-theme .farm-forecast-item small {
+  color: #a8b7ac;
+}
+
+.farm-dark-theme .farm-logout {
+  background: #382b2a;
+  border-color: #5c403c;
+  color: #efb0a7;
+}
+
+.farm-dark-theme .farm-search-results {
+  background: #202d24;
+  border-color: #394c3e;
+}
+
+.farm-dark-theme .farm-search-results-heading,
+.farm-dark-theme .farm-search-result,
+.farm-dark-theme .farm-notification-content strong {
+  color: #edf4ee;
+}
+
+.farm-dark-theme .farm-search-result:hover { background: #2a4030; }
+
+@media (prefers-reduced-motion: reduce) {
+  .farm-app *,
+  .farm-app *::before,
+  .farm-app *::after {
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
 }
