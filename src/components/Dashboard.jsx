@@ -2388,19 +2388,24 @@ const t = (key) => translations[appLanguage]?.[key] || translations.uz[key] || k
 ))}
 </nav>
 
-        <div className="farm-sidebar-bottom">
-         <button
-  className="farm-nav-item farm-settings"
-  onClick={() => setActive('Sozlamalar')}
->
-  <Settings size={19} />
-  <span>{t('settings')}</span>
-</button>
-          <button className="farm-logout" onClick={logout}>
-  <LogOut size={18} />
-  {t('logout')}
-</button>
-        </div>
+      <div className="farm-sidebar-bottom">
+  <button
+    type="button"
+    className="farm-nav-item farm-settings"
+    onClick={() => {
+      setActive('Sozlamalar')
+      setMobileMenu(false)
+    }}
+  >
+    <Settings size={19} />
+    <span>{t('settings')}</span>
+  </button>
+
+  <button className="farm-logout" onClick={logout}>
+    <LogOut size={18} />
+    {t('logout')}
+  </button>
+</div>
       </aside>
 
       <main className="farm-main">

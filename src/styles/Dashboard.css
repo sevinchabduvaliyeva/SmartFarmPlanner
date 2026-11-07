@@ -74,7 +74,12 @@
 .farm-logout { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 10px; border: 1px solid #e7ece6; border-radius: 10px; background: #fff; color: #66776b; font-size: 12px; }
 .farm-logout:hover { color: #a53e35; background: #fff8f7; }
 
-.farm-main { width: calc(100% - 258px); min-width: 0; margin-left: 258px; }
+.farm-main {
+  width: calc(100% - 258px);
+  min-width: 0;
+  margin-left: 258px;
+  background: #F7F4DF;
+}
 .farm-topbar { position: sticky; z-index: 10; top: 0; height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 0 36px; border-bottom: 1px solid var(--farm-line); background: rgba(255,255,255,.94); backdrop-filter: blur(12px); }
 .farm-breadcrumb { color: #849087; font-size: 12px; }
 .farm-breadcrumb span { padding: 0 9px; color: #c0c8c1; }
@@ -93,8 +98,45 @@
 .farm-welcome h1, .farm-section-page > h1 { margin: 10px 0 7px; color: #24392b; font-size: clamp(25px, 2.4vw, 33px); font-weight: 780; letter-spacing: -1.1px; }
 .farm-welcome h1 span { font-size: .8em; }
 .farm-welcome p, .farm-section-page > p { margin: 0; color: #849087; font-size: 13px; line-height: 1.6; }
-.farm-primary-button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 42px; padding: 0 16px; border: 0; border-radius: 10px; background: #286b43; color: #fff; font-size: 12px; font-weight: 750; white-space: nowrap; }
-.farm-primary-button:hover { background: #205735; }
+/* Asosiy amallar */
+.farm-primary-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 43px;
+  padding: 0 17px;
+  border: 1px solid #d9e1d4;
+  border-left: 3px solid #718b52;
+  border-radius: 7px;
+  background: #f3f5ed;
+  color: #344b38;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .1px;
+  white-space: nowrap;
+  transition: background .2s ease, border-color .2s ease,
+              transform .2s ease;
+}
+
+.farm-primary-button svg {
+  width: 16px;
+  height: 16px;
+  color: #718b52;
+  stroke-width: 2;
+}
+
+.farm-primary-button:hover {
+  background: #e9eee1;
+  border-color: #c7d3bd;
+  border-left-color: #536f3c;
+  transform: translateY(-1px);
+}
+
+.farm-primary-button:active {
+  transform: translateY(0);
+}
 
 .farm-hero-banner { position: relative; display: flex; min-height: 235px; overflow: hidden; border-radius: 18px; background: #183d29; color: white; }
 .farm-hero-copy { position: relative; z-index: 2; width: 57%; padding: 29px 33px; }
@@ -158,8 +200,36 @@
 .farm-weather-placeholder > svg { margin-bottom: 13px; color: #b7c39f; }
 .farm-weather-placeholder strong { color: #536658; font-size: 12px; }
 .farm-weather-placeholder p { max-width: 240px; margin: 7px 0 0; color: #929d93; font-size: 11px; line-height: 1.6; }
-.farm-outline-button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 38px; padding: 0 13px; border: 1px solid #e1e9df; border-radius: 9px; background: #fff; color: #4c6c53; font-size: 11px; font-weight: 700; }
-.farm-outline-button:hover { background: #f4f8f2; }
+/* Ikkinchi darajali amallar */
+.farm-outline-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 39px;
+  padding: 0 14px;
+  border: 1px solid #dfe5dc;
+  border-radius: 7px;
+  background: #fff;
+  color: #58665a;
+  font-size: 11px;
+  font-weight: 650;
+  white-space: nowrap;
+  transition: background .2s ease, border-color .2s ease,
+              color .2s ease;
+}
+
+.farm-outline-button svg {
+  width: 15px;
+  height: 15px;
+  color: #82917d;
+}
+
+.farm-outline-button:hover {
+  background: #f5f7f1;
+  border-color: #cbd6c5;
+  color: #344b38;
+}
 
 .farm-text-button { display: inline-flex; align-items: center; gap: 5px; padding: 6px 0; border: 0; background: transparent; color: #39794b; font-size: 11px; font-weight: 750; white-space: nowrap; }
 .farm-table-wrap { width: 100%; overflow-x: auto; }
@@ -217,7 +287,11 @@
   .farm-sidebar.farm-sidebar-open { transform: translateX(0); }
   .farm-close-menu { display: grid; place-items: center; }
   .farm-mobile-overlay { position: fixed; z-index: 25; inset: 0; display: block; border: 0; background: rgba(16,35,22,.35); }
-  .farm-main { width: 100%; margin-left: 0; }
+  .farm-main {
+  width: 100%;
+  margin-left: 0;
+  background: #F7F4DF;
+}
   .farm-topbar { height: 65px; gap: 12px; padding: 0 18px; }
   .farm-menu-button { display: grid; }
   .farm-search { width: 180px; }
@@ -455,47 +529,56 @@
   background: #fff1f2;
 }
 
+/* Jadvaldagi amallar */
 .farm-action-buttons {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 }
 
 .farm-icon-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 33px;
+  height: 33px;
+  padding: 0;
   border: 1px solid transparent;
-  border-radius: 10px;
+  border-radius: 7px;
   cursor: pointer;
-  transition:
-    background-color 0.2s ease,
-    color 0.2s ease,
-    transform 0.2s ease;
+  transition: background .18s ease, border-color .18s ease,
+              color .18s ease;
 }
 
-.farm-icon-button:hover {
-  transform: translateY(-1px);
+.farm-icon-button svg {
+  width: 15px;
+  height: 15px;
 }
 
 .farm-edit-button {
-  color: #3678d4;
-  background: #eff6ff;
+  color: #687d62;
+  background: #f2f5ee;
 }
 
 .farm-edit-button:hover {
-  background: #dbeafe;
+  color: #3f633f;
+  background: #e7eee1;
+  border-color: #d6e2ce;
 }
 
 .farm-delete-button {
-  color: #dc5252;
-  background: #fff1f1;
+  color: #a66b60;
+  background: #faf3f0;
 }
 
 .farm-delete-button:hover {
-  background: #fee2e2;
+  color: #a33f35;
+  background: #f7e8e4;
+  border-color: #ecd2cb;
+}
+
+.farm-icon-button:active {
+  transform: scale(.96);
 }
 
 /* Sug‘orish bo‘limidagi ikonka tugmalari */
@@ -525,29 +608,46 @@
 .farm-action-buttons .farm-icon-button:hover {
   transform: translateY(-1px);
 }
+/* Vazifani yakunlash tugmasi */
 .farm-complete-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 7px;
-  padding: 8px 14px;
+  min-height: 33px;
+  padding: 0 11px;
   margin-top: 7px;
-  border: 1px solid #bbf7d0;
-  border-radius: 9px;
-  background: #f0fdf4;
-  color: #15803d;
-  font-size: 12px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease;
+  border: 1px solid #d9e4d1;
+  border-radius: 6px;
+  background: #f5f7f1;
+  color: #55734b;
+  font-size: 11px;
+  font-weight: 650;
   white-space: nowrap;
+  cursor: pointer;
+  transition: background .2s ease, border-color .2s ease;
+}
+
+.farm-complete-button svg {
+  width: 14px;
+  height: 14px;
 }
 
 .farm-complete-button:hover {
-  background: #dcfce7;
-  border-color: #86efac;
-  transform: translateY(-1px);
-  box-shadow: 0 3px 8px rgba(22, 163, 74, 0.12);
+  background: #eaf0e3;
+  border-color: #c4d5b9;
+  color: #3d633c;
+}
+
+.farm-complete-button:active {
+  transform: scale(.98);
+}
+
+.farm-irrigation-status {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
 }
 
 .farm-complete-button:active {
@@ -2728,5 +2828,182 @@
     animation-duration: .01ms !important;
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
+  }
+}
+/* BOSH SAHIFA — MATNLAR O‘LCHAMI */
+
+/* Salomlashuv va sahifa sarlavhasi */
+.farm-welcome h1 {
+  font-size: clamp(29px, 2.5vw, 36px);
+  line-height: 1.3;
+}
+
+.farm-welcome p {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.farm-date {
+  font-size: 13px;
+}
+
+/* Katta banner */
+.farm-hero-copy h2 {
+  font-size: clamp(29px, 2.8vw, 38px);
+  line-height: 1.2;
+}
+
+.farm-hero-copy p {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.farm-hero-tag {
+  font-size: 12px;
+}
+
+/* Statistik kartalar */
+.farm-stat-label {
+  font-size: 13px;
+}
+
+.farm-stat-value {
+  font-size: 35px;
+}
+
+.farm-stat-value small {
+  font-size: 14px;
+}
+
+.farm-stat-foot {
+  font-size: 12px;
+}
+
+/* Bo‘lim sarlavhalari */
+.farm-panel-heading h3 {
+  font-size: 19px;
+}
+
+.farm-panel-eyebrow {
+  font-size: 11px;
+}
+
+/* AI tavsiyalari va xavf ko‘rsatkichlari */
+.farm-ai-main strong {
+  font-size: 14px;
+}
+
+.farm-ai-main p {
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.farm-risk-list span,
+.farm-risk-list strong {
+  font-size: 13px;
+}
+
+.farm-demo-note {
+  font-size: 12px;
+}
+
+/* Ob-havo bo‘limi */
+.farm-weather-placeholder strong {
+  font-size: 14px;
+}
+
+.farm-weather-placeholder p {
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* Ekinlar jadvali */
+.farm-table th {
+  font-size: 13px;
+}
+
+.farm-table td {
+  font-size: 14px;
+}
+
+.farm-crop-name {
+  font-size: 15px;
+}
+
+.farm-crop-name small,
+.farm-table-sub {
+  font-size: 12px;
+}
+
+/* Vazifalar ro‘yxati */
+.farm-task-title {
+  font-size: 13px;
+}
+
+.farm-task-title small {
+  font-size: 12px;
+}
+
+/* Mobil ekran */
+@media (max-width: 520px) {
+  .farm-welcome h1 {
+    font-size: 27px;
+  }
+
+  .farm-hero-copy h2 {
+    font-size: 27px;
+  }
+
+  .farm-stat-value {
+    font-size: 29px;
+  }
+
+  .farm-panel-heading h3 {
+    font-size: 17px;
+  }
+}
+/* OB-HAVO — 7 KUNLIK PROGNOZ MATNLARI */
+.farm-weather-forecast h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.farm-forecast-item {
+  padding: 13px 10px;
+  min-width: 0;
+}
+
+.farm-forecast-item span {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.farm-forecast-item strong {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.farm-forecast-item small {
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+@media (max-width: 520px) {
+  .farm-weather-forecast h4 {
+    font-size: 15px;
+  }
+
+  .farm-forecast-item span {
+    font-size: 12px;
+  }
+
+  .farm-forecast-item strong {
+    font-size: 14px;
+  }
+
+  .farm-forecast-item small {
+    font-size: 11px;
   }
 }
